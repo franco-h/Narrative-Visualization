@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"
@@ -11,34 +12,54 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <title>CS-416 Narrative Visualization, by Franco Hui</title>
+    <title>D3 Charts</title>
   </head>
   <body>
-    <h2 class="header">
-      United Nations - World Population Projection from 1950 to 2100
-    </h2>
+    <h1 class="header-title">
+      How Does Income Relate to Life Expectancy? 1800-2014
+    </h1>
+    <h3 class="header">
+      Inspired by, and data sourced from
+      https://www.gapminder.org/answers/how-does-income-relate-to-life-expectancy/
+    </h3>
+
+    <h4 class="text-option">- Available options -</h4>
+    <h4 class="text-2">
+      + Click on a button to forward / backward/ go to a year: 1800, 1900, 2000
+      +
+    </h4>
+    <h4 class="text-2">
+      + Use a slider at the bottom of the chart to set to any specific year
+      between 1800 and 2014 +
+    </h4>
+    <h4 class="text-2">
+      + Explore the data by hover any data point for details on demand +
+    </h4>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://population.un.org/wpp/">
-                  Data source
-                </a>
-              </h5>
-              <p class="card-text">
-                The population projection is a chart that shows the population
-                of the world from 1950 to 2100. The data is from the UN Population Projection Dataset.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="state-buttons">
-          <button></button>
-        </div>
+      <div class="buttons">
+        <button id="backward"><</button>
+        <button id="first">1800</button>
+        <button id="second">1900</button>
+        <button id="third">2000</button>
+        <button id="forward">></button>
       </div>
+      <span class="tooltip"></span>
+      <div id="chart"></div>
 
+      <div class="years">
+        <label for="years">Year: </label>
+        <input
+          type="range"
+          name="years"
+          id="years"
+          min="1800"
+          max="2014"
+          step="1"
+          value="1800"
+        />
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>

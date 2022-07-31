@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-title {
+  text-align: center;
+  color: black;
+  font: Arial, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.header {
+  text-align: center;
+  color: black;
+  font: Arial, sans-serif;
+  padding-bottom: 0px;
+}
+
+.text {
+  text-align: center;
+  color: black;
+  font: Arial, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.text-option{
+  text-align: center;
+  color: black;
+  font: Arial, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.text-2{
+  text-align: center;
+  color: black;
+  font: Arial, sans-serif;
+  padding-top: 0px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+#years {
+  width: 900px;
+}
+
+.annotation-group {
+  max-width: 170px;
+  width: 170px !important;
+  font-size: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  background: steelblue;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+
+}
